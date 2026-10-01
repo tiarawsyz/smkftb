@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  padding: 32px 16px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Profil Header */
+header {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.meta-item {
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Grid Kartu Latihan */
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+}
+
+.card-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 3px 8px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--primary);
+  color: #b24141;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.card a:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+    </style>
+</head>
+<body>
+
+
+
+<!-- Daftar Tugas / Latihan -->
+<h2 class="section-title">Daftar Modul & Latihan</h2>
+
+<div class="grid">
+  <!-- Kartu Latihan 1 -->
+  <div class="card">
+    <div>
+      <span class="card-badge">Pertemuan 1</span>
+      <h3>Struktur Dasar HTML</h3>
+      <p>Latihan pembuatan halaman pertama dengan tag heading, paragraf, daftar list, dan format teks.</p>
+    </div>
+    <a href="latihan1.html" target="_blank">Lihat Hasil &rarr;</a>
+  </div>
+
+  <!-- Kartu Latihan 2 -->
+  <div class="card">
+    <div>
+      <span class="card-badge">Pertemuan 2</span>
+      <h3>Formulir Registrasi</h3>
+      <p>Membuat form input data siswa lengkap dengan validasi radio button, checkbox, dan dropdown select.</p>
+    </div>
+    <a href="formulir.html" target="_blank">Lihat Hasil &rarr;</a>
+  </div>
+
+  <!-- Kartu Latihan 3 -->
+  <div class="card">
+    <div>
+      <span class="card-badge">Pertemuan 3</span>
+      <h3>Styling CSS Layout</h3>
+      <p>Menerapkan Flexbox dan CSS Grid sederhana untuk membuat kartu produk belanja.</p>
+    </div>
+    <a href="toko-online.html" target="_blank">Lihat Hasil &rarr;</a>
+  </div>
+
+  <!-- Kartu Latihan 4 -->
+  <div class="card">
+    <div>
+      <span class="card-badge">Pertemuan 4</span>
+      <h3>Kalkulator Interaktif</h3>
+      <p>Implementasi event click dan fungsi DOM JavaScript untuk perhitungan aritmatika dasar.</p>
+    </div>
+    <a href="kalkulator.html" target="_blank">Lihat Hasil &rarr;</a>
+  </div>
+
+  <!-- Kartu Tugas Akhir / Proyek Mandiri -->
+  <div class="card">
+    <div>
+      <span class="card-badge">Tugas Mandiri</span>
+      <h3>Landing Page Pribadi</h3>
+      <p>Halaman perkenalan diri dan hobi yang responsif untuk tampilan layar desktop dan smartphone.</p>
+    </div>
+    <!-- Contoh jika file berada di dalam sub-folder -->
+    <a href="proyek-landing/index.html" target="_blank">Lihat Hasil &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  &copy; Lab Komputer &mdash; Dihosting langsung lewat GitHub Pages
+</footer>
+</body>
+</html>
